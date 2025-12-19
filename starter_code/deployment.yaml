@@ -8,17 +8,17 @@ metadata:
   labels:
     app: web-app
 spec:
-  replicas: # TODO: Set number of replicas
+  replicas: 2 # TODO: Set number of replicas
   selector:
     matchLabels:
-      app: # TODO: Match label
+      app: web-app # TODO: Match label
   template:
     metadata:
       labels:
-        app: # TODO: Pod label
+        app: web-app # TODO: Pod label
     spec:
       containers:
-      - name: # TODO: Container name
-        image: # TODO: Image name (e.g., nginx:alpine)
+      - name: nginx # TODO: Container name
+        image: nginx:alpine # TODO: Image name (e.g., nginx:alpine)
         ports:
-        - containerPort: # TODO: Port number
+        - containerPort: 80 # TODO: Port number

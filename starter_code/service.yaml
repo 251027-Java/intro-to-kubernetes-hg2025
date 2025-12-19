@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+spec:
+  selector:
+    app: web-app # Must match label in deployment.yaml
+  ports:
+  - protocol: TCP
+    port: 80         # The port the service exposes
+    targetPort: 80   # The port the Nginx container is listening on
+  type: LoadBalancer
